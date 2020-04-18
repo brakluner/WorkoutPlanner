@@ -1,0 +1,1 @@
+Fitness tracker for keeping excercise data stored in mango db
