@@ -113,7 +113,7 @@ async function handleFormSubmit(event) {
   }
   console.log(workoutData)
   if (location.search.split("=")[1] === undefined) {
-    location.search = "?id=" + workoutData._id;
+    // location.search = "?id=" + workoutData._id;
     await API.createWorkout(workoutData);
     console.log(workoutData);
     clearInputs();
