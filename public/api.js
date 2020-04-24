@@ -10,6 +10,13 @@ const API = {
 
     return json[json.length - 1];
   },
+  async getLastExercises() {
+    const id = location.search.split("=")[1];
+    const res = await fetch(`/api/populated${id}`);
+    const json = await res.json();
+
+    return json;
+  },
   async addExercise(data) {
     const id = location.search.split("=")[1];
 
