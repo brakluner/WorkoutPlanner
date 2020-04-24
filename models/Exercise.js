@@ -12,7 +12,7 @@ const exerciseSchema = new Schema({
         trim: true,
     },
     duration: {
-        type: String,
+        type: Number,
         trim: true,
     },
     weight: {
