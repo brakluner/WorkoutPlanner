@@ -2,7 +2,7 @@ async function initWorkout() {
   const lastWorkout = await API.getLastWorkout();
   const lastExercises = await API.getLastExercises();
   console.log("Last workout:", lastWorkout);
-  console.log(lastExercises[0].exercises)
+  console.log(lastExercises)
   if (lastWorkout) {
     document
       .querySelector("a[href='/exercise?']")
