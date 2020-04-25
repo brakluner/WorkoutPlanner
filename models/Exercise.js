@@ -27,7 +27,7 @@ const exerciseSchema = new Schema({
         type: Number,
         trim: true,
     },
-    Distance: {
+    distance: {
         type: Number,
         trim: true,
     },
