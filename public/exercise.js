@@ -20,14 +20,17 @@ let shouldNavigateAway = false;
 async function initExercise() {
   let workout;
 
+  if (location.search.split("=")[1] === undefined) {
     workout = await API.createWorkout()
     console.log(workout)
   }
-  // if (workout) {
-  //   location.search = "?id=" + workout._id;
-  // }
+  if (workout) {
+    location.search = "?id=" + workout._id;
+  }
 
+}
 
+initExercise();
 
 
 function handleWorkoutTypeChange(event) {
@@ -111,19 +114,9 @@ async function handleFormSubmit(event) {
     workoutData.reps = Number(repsInput.value.trim());
     workoutData.duration = Number(resistanceDurationInput.value.trim());
   }
-  console.log(workoutData)
-  if (location.search.split("=")[1] === undefined) {
-    // location.search = "?id=" + workoutData._id;
-    await API.createWorkout(workoutData);
-    console.log(workoutData);
-    clearInputs();
-    toast.classList.add("success");
-  } else {
   await API.addExercise(workoutData);
   clearInputs();
-  console.log(workoutData)
   toast.classList.add("success");
-}
 }
 
 function handleToastAnimationEnd() {
