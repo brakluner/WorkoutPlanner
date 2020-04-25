@@ -12,7 +12,7 @@ const API = {
   },
   async getLastExercises() {
     const id = location.search.split("=")[1];
-    const res = await fetch(`/api/populated${id}`);
+    const res = await fetch(`/api/populated/${id}`);
     const json = await res.json();
 
     return json;
