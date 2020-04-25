@@ -1,7 +1,7 @@
 {
   "name": "mongoose_skeleton",
   "version": "1.0.0",
-  "description": "",
+  "description": "Fitness tracker for keeping excercise data stored in mango db",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,7 +13,19 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "mongojs": "^3.1.0",
     "mongoose": "^5.9.9",
-    "morgan": "^1.9.1"
-  }
+    "morgan": "^1.9.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brakluner/WorkoutPlanner.git"
+  },
+  "bugs": {
+    "url": "https://github.com/brakluner/WorkoutPlanner/issues"
+  },
+  "homepage": "https://github.com/brakluner/WorkoutPlanner#readme"
 }

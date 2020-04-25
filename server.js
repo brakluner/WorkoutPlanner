@@ -7,12 +7,13 @@ var PORT = process.env.PORT || 3000;
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
+app.use(require("./routes/apiRoutes"))
 
-require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workouts", {
-  useNewUrlParser: true
+mongoose.connect(process.env.MONGODB_URI || "mongodb://fitnesstracker:6Apples@ds057244.mlab.com:57244/heroku_slsrv8x9", {
+  useNewUrlParser: true,
+  useFindAndModify: false
 });
 
 app.listen(PORT, function() {
